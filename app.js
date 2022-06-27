@@ -33,10 +33,10 @@ app.post('/login', routes.login );
 app.post('/logout', routes.logout );
 
 // Custom Hello World Activity Routes
-app.post('/chek/save/', activity.save );
-app.post('/chek/validate/', activity.validate );
-app.post('/chek/publish/', activity.publish );
-app.post('/chek/execute/', activity.execute );
+app.post('/check/save/', activity.save );
+app.post('/check/validate/', activity.validate );
+app.post('/check/publish/', activity.publish );
+app.post('/check/execute/', activity.execute );
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
