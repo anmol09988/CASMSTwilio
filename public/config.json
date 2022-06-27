@@ -7,7 +7,7 @@
     "type": "REST",
     "lang": {
        "en-US": {
-           "name": "CA SFMC SMS",
+           "name": "SFMC",
            "description": "Send Twilio SMS with Journey Builder",
            "TwilioMessage":"test"
        }
