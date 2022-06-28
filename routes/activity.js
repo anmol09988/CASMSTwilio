@@ -104,18 +104,16 @@ exports.execute = function (req, res) {
     const body = requestBody.body;;
     console.log("Executed: "+from)
 
-    const client = require('twilio')(accountSid, authToken); 
+    const client = require('/node_modules/Twilio')(accountSid, authToken); 
      
     client.messages 
           .create({ 
              body: body,
-             messagingService: from,
+             messagingService: messagingService,
              to: to
            }) 
           .then(message => console.log(message.sid)) 
           .done();
-
-
 
     // FOR TESTING
     logData(req);
