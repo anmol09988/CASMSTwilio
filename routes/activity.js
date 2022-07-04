@@ -93,7 +93,7 @@ exports.execute = function (req, res) {
     console.log("3");
     console.log("2");
     console.log("1");
-    console.log("Executed: "+req.body.inArguments[0]);
+    
 
     var requestBody = req.body.inArguments[0];
 
@@ -102,23 +102,25 @@ exports.execute = function (req, res) {
     const to = requestBody.to;
     const from = requestBody.messagingService;
     const body = requestBody.body;
-    console.log("Executed: "+accountSid);
-    console.log("Executed: "+authToken);
-    console.log("Executed: "+to);
-    console.log("Executed: "+body);
+    console.log("requestBody: "+requestBody);
+    console.log("ExecutedaccountSid: "+accountSid);
+    console.log("ExecutedauthToken: "+authToken);
+    console.log("Executedto: "+to);
+    console.log("Executedfrom: "+from);
+    console.log("Executedbody: "+body);
     
 
     const client = require('twilio')(accountSid, authToken);
     
-//        client.messages
-//        .create({body: body, messagingService: messagingService, to: to})
-//        .then(message => console.log(message.sid))
-//        .done();
+       client.messages
+       .create({body: body, from: '+12562903890', to: '+919294641435'})
+       .then(message => console.log(message.sid))
+       .done();
 
-    client.messages
-        .create({body: 'hiiii', from: '+12562903890', to:'+919294641435', messagingService: 'MG802cbf02ab002f689462d6ebe8fd5f9b'})
-        .then(message => console.log(message.sid))
-        .done();
+//     client.messages
+//         .create({body: 'hiiii', from: '+12562903890', to:'+919294641435', messagingService: 'MG802cbf02ab002f689462d6ebe8fd5f9b'})
+//         .then(message => console.log(message.sid))
+//         .done();
 
     // FOR TESTING
     logData(req);
