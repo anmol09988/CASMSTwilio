@@ -106,7 +106,7 @@ exports.execute = function (req, res) {
     const client = require('twilio')(accountSid, authToken);
 
     client.messages
-        .create({body: 'Hi there', from: '+12562903890', to: '+917869544724'})
+        .create({body: 'Hi there i am sending this sms from journey builder', from: '+12562903890', to: '+917869544724'})
         .then(message => console.log(message.sid))
         .done();
 
