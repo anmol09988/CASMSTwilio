@@ -93,7 +93,7 @@ exports.execute = function (req, res) {
     console.log("3");
     console.log("2");
     console.log("1");
-    //console.log("Executed: "+req.body.inArguments[0]);
+    console.log("Executed: "+req.body.inArguments[0]);
 
     var requestBody = req.body.inArguments[0];
 
@@ -101,7 +101,12 @@ exports.execute = function (req, res) {
     const authToken = requestBody.authToken;
     const to = requestBody.to;
     const from = requestBody.messagingService;
-    const body = requestBody.body;;
+    const body = requestBody.body;
+    console.log("Executed: "+accountSid);
+    console.log("Executed: "+authToken);
+    console.log("Executed: "+to);
+    console.log("Executed: "+body);
+    
 
     const client = require('twilio')(accountSid, authToken);
     
