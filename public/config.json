@@ -17,7 +17,7 @@
             "inArguments": [
                 {
                   "email": "{{Contact.Default.EmailAddress}}",  
-                  "to": "{{Contact.Attribute.Test_import_Copy.PhoneNo}}" 
+                  "to": "{{Contact.Attribute.CASFMCSMS.PhoneNo}}" 
                 }               
             ],
             "outArguments": [],
