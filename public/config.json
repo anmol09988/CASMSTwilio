@@ -12,14 +12,15 @@
            "TwilioMessage":"test"
        }
     },
-    "arguments": {
+   "arguments": {
         "execute": {
-            "inArguments": [
-                {
-                  "email": "{{Contact.Default.EmailAddress}}",  
-                  "to": "{{Contact.Attribute.CASFMCSMS.PhoneNo}}" 
-                }               
-            ],
+            "inArguments": [{
+                 "SubscriberKey": "{{Contact.Key}}"
+                },{
+                  "email": "{{Contact.Default.EmailAddress}}"
+                },{ 
+                  "to": "{{Contact.Attribute.Test_import_Copy.PhoneNo}}" 
+                }],
             "outArguments": [],
             "url": "https://smstwilioca.herokuapp.com/check/execute",
             "verb": "POST",
