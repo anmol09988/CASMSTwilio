@@ -94,6 +94,10 @@ define([
         var authToken = $('#authToken').val();
         var messagingService = $('#messagingService').val();
         var body = $('#messageBody').val();
+        console.log("testaccountSid"+accountSid);
+        console.log("testauthToken"+authToken);
+        console.log("testmessagingService"+messagingService);
+        console.log("testbody"+body);
 
         payload['arguments'].execute.inArguments = [{
             "accountSid": accountSid,
