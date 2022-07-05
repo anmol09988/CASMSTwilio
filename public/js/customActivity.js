@@ -100,8 +100,6 @@ define([
             "authToken": authToken,
             "messagingService": messagingService,
             "body": body,
-            "SubscriberKey": "{{Contact.Key}}",
-            "email": "{{Contact.Default.EmailAddress}}",
             "to": "{{Contact.Attribute.Test_import_Copy.PhoneNo}}" //<----This should map to your data extension name and phone number column
         }];
 
