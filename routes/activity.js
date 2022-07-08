@@ -115,8 +115,8 @@ exports.execute = function (req, res) {
 //        .then(message => console.log(message.sid))
 //        .done();
     
-     const accountSid = requestBody.accountSid;
-     const authToken = requestBody.authToken;
+    // const accountSid = requestBody.accountSid;
+    // const authToken = requestBody.authToken;
      const client = require('twilio')(accountSid, authToken);
 
     client.messages
