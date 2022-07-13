@@ -119,19 +119,6 @@ exports.execute = function (req, res) {
 //     // const authToken = requestBody.authToken;
 //      const client = require('twilio')(accountSid, authToken);
 
-//     client.messages
-//           .create({
-//                  from: 'whatsapp:+14155238886',
-//                  body: 'Hello, there!',
-//                  to: 'whatsapp:+919294641435'
-//                    })
-//                  .then(message => console.log(message.sid));
-
-//     client.messages
-//         .create({body: 'hiiii', from: '+12562903890', to:'+919294641435', messagingService: 'MG802cbf02ab002f689462d6ebe8fd5f9b'})
-//         .then(message => console.log(message.sid))
-//         .done();
-
     // FOR TESTING
     logData(req);
     //  res.send(200, 'Publish');
