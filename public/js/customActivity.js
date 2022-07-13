@@ -113,5 +113,4 @@ define([
         connection.trigger('updateActivity', payload);
 
     }                    
-
 });
