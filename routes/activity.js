@@ -109,11 +109,11 @@ exports.execute = function (req, res) {
     console.log("Executedfrom: "+from);
     console.log("Executedbody: "+body);
     
-      const client = require('twilio')(accountSid, authToken);
-         client.messages
-        .create({body: 'Hello this sms is sent form journey builder SFMC', from: '+12562903890', to:'+919294641435', messagingService: 'MG802cbf02ab002f689462d6ebe8fd5f9b'})
-        .then(message => console.log(message.sid))
-        .done();
+//       const client = require('twilio')(accountSid, authToken);
+//          client.messages
+//         .create({body: 'Hello this sms is sent form journey builder SFMC', from: '+12562903890', to:'+919294641435', messagingService: 'MG802cbf02ab002f689462d6ebe8fd5f9b'})
+//         .then(message => console.log(message.sid))
+//         .done();
     
 //         client.messages
 //         .create({body: body, from: '+12562903890', to:to, messagingService: from})
@@ -121,19 +121,15 @@ exports.execute = function (req, res) {
 //         .done();
 
 
-//     const client = require('twilio')(accountSid, authToken);
-//        client.messages
-//        .create({body: body, from: '+12562903890', to: to, messagingService: from})
-//        .then(message => console.log(message.sid))
-//        .done();
+    const client = require('twilio')(accountSid, authToken);
+       client.messages
+       .create({body: body, from: '+12562903890', to: to, messagingService: from})
+       .then(message => console.log(message.sid))
+       .done();
     
-//     // const accountSid = requestBody.accountSid;
-//     // const authToken = requestBody.authToken;
-//      const client = require('twilio')(accountSid, authToken);
-
     // FOR TESTING
     logData(req);
-    //  res.send(200, 'Publish');
+      res.send(200, 'Publish');
 
     // Used to decode JWT
     // JWT(req.body, process.env.jwtSecret, (err, decoded) => {
