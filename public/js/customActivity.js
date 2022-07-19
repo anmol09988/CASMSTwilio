@@ -104,7 +104,7 @@ define([
             "authToken": authToken,
             "messagingService": messagingService,
             "body": body,
-            "to": "{{Event.DEAudience-479884e4-55c8-0186-44df-33fab7eeddce.PhoneNo}}" //<----This should map to your data extension name and phone number column
+            "to": "{{Contact.Attribute.Test_import_Copy.PhoneNo}}" //<----This should map to your data extension name and phone number column
         }];
 
         payload['metaData'].isConfigured = true;
