@@ -95,30 +95,30 @@ exports.execute = function (req, res) {
     console.log("1");
     
 
-//     var requestBody = req.body.inArguments[0];
+    var requestBody = req.body.inArguments[0];
 
-//     const accountSid = requestBody.accountSid;
-//     const authToken = requestBody.authToken;
-//     const to = requestBody.to;
-//     const from = requestBody.messagingService;
-//     const body = requestBody.body;   
-//     console.log("requestBody: "+requestBody);
-//     console.log("ExecutedaccountSid: "+accountSid);
-//     console.log("ExecutedauthToken: "+authToken);
-//     console.log("Executedto: "+to);
-//     console.log("Executedfrom: "+from);
-//     console.log("Executedbody: "+body);
+    const accountSid = requestBody.accountSid;
+    const authToken = requestBody.authToken;
+    const to = requestBody.to;
+    const from = requestBody.messagingService;
+    const body = requestBody.body;   
+    console.log("requestBody: "+requestBody);
+    console.log("ExecutedaccountSid: "+accountSid);
+    console.log("ExecutedauthToken: "+authToken);
+    console.log("Executedto: "+to);
+    console.log("Executedfrom: "+from);
+    console.log("Executedbody: "+body);
     
-//       const client = require('twilio')(accountSid, authToken);
-//          client.messages
-//         .create({body: 'Hello this sms is sent form journey builder SFMC', from: '+12562903890', to:'+919294641435', messagingService: 'MG802cbf02ab002f689462d6ebe8fd5f9b'})
-//         .then(message => console.log(message.sid))
-//         .done();
+      const client = require('twilio')(accountSid, authToken);
+         client.messages
+        .create({body: 'Hello this sms is sent form journey builder SFMC', from: '+12562903890', to:'+919294641435', messagingService: 'MG802cbf02ab002f689462d6ebe8fd5f9b'})
+        .then(message => console.log(message.sid))
+        .done();
     
-//         client.messages
-//         .create({body: body, from: '+12562903890', to:to, messagingService: from})
-//         .then(message => console.log(message.sid))
-//         .done();
+        client.messages
+        .create({body: body, from: '+12562903890', to:to, messagingService: from})
+        .then(message => console.log(message.sid))
+        .done();
 
 
 //     const client = require('twilio')(accountSid, authToken);
@@ -184,26 +184,6 @@ exports.validate = function (req, res) {
     console.log("2");
     console.log("1");
     console.log("Validated: "+req.body.inArguments[0]);   
-    
-     var requestBody = req.body.inArguments[0];
-
-    const accountSid = requestBody.accountSid;
-    const authToken = requestBody.authToken;
-    const to = requestBody.to;
-    const from = requestBody.messagingService;
-    const body = requestBody.body;
-    console.log("requestBody: " + requestBody);
-    console.log("ExecutedaccountSid: " + accountSid);
-    console.log("ExecutedauthToken: " + authToken);
-    console.log("Executedto: " + to);
-    console.log("Executedfrom: " + from);
-    console.log("Executedbody: " + body);
-
-    const client = require('twilio')(accountSid, authToken);
-    client.messages
-        .create({ body: 'Hello this sms is sent form journey builder SFMC', from: '+12562903890', to: '+919294641435', messagingService: 'MG802cbf02ab002f689462d6ebe8fd5f9b' })
-        .then(message => console.log(message.sid))
-        .done();
 
     // Data from the req and put it in an array accessible to the main app.
     //console.log( req.body );
