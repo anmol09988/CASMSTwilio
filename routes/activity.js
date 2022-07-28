@@ -111,14 +111,14 @@ exports.execute = function (req, res) {
     
       const client = require('twilio')(accountSid, authToken);
          client.messages
-        .create({body: 'Hello this sms is sent form journey builder SFMC', from: '+12562903890', to:'+919294641435', messagingService: 'MG802cbf02ab002f689462d6ebe8fd5f9b'})
+        .create({body: body, from: '+12562903890', to: to, messagingService: messagingService })
         .then(message => console.log(message.sid))
         .done();
     
-        client.messages
-        .create({body: body, from: '+12562903890', to:to, messagingService: from})
-        .then(message => console.log(message.sid))
-        .done();
+//         client.messages
+//         .create({body: body, from: '+12562903890', to:to, messagingService: from})
+//         .then(message => console.log(message.sid))
+//         .done();
 
 
 //     const client = require('twilio')(accountSid, authToken);
