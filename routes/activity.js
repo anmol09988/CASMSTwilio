@@ -109,11 +109,11 @@ exports.execute = function (req, res) {
     console.log("Executedfrom: "+from);
     console.log("Executedbody: "+body);
     
-      const client = require('twilio')(accountSid, authToken);
-         client.messages
-        .create({body: body, from: '+12562903890', to: to, messagingService: messagingService })
-        .then(message => console.log(message.sid))
-        .done();
+//       const client = require('twilio')(accountSid, authToken);
+//          client.messages
+//         .create({body: body, from: '+12562903890', to: to, messagingService: messagingService })
+//         .then(message => console.log(message.sid))
+//         .done();
     
 //         client.messages
 //         .create({body: body, from: '+12562903890', to:to, messagingService: from})
@@ -121,11 +121,11 @@ exports.execute = function (req, res) {
 //         .done();
 
 
-//     const client = require('twilio')(accountSid, authToken);
-//        client.messages
-//        .create({body: body, from: '+12562903890', to: to, messagingService: from})
-//        .then(message => console.log(message.sid))
-//        .done();
+    const client = require('twilio')(accountSid, authToken);
+       client.messages
+       .create({body: body, from: '+12562903890', to: to, messagingService: from})
+       .then(message => console.log(message.sid))
+       .done();
     
     // FOR TESTING
     logData(req);
