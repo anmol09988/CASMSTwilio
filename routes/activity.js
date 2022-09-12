@@ -103,6 +103,7 @@ exports.execute = function (req, res) {
     const from = requestBody.messagingService;
     const body = requestBody.body; 
     const OTP =  requestBody.OTP;
+    
     console.log("requestBody: "+requestBody);
     console.log("ExecutedaccountSid: "+accountSid);
     console.log("ExecutedauthToken: "+authToken);
@@ -125,7 +126,7 @@ exports.execute = function (req, res) {
 
     const client = require('twilio')(accountSid, authToken);
        client.messages
-       .create({body: body, from: '+12562903890', to: to, messagingService: from})
+       .create({body: 'Hi Your New OTP is :'+OTP, from: '+12562903890', to: to, messagingService: from})
        .then(message => console.log(message.sid))
        .done();
     
