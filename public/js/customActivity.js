@@ -104,7 +104,7 @@ define([
             "authToken": authToken,
             "messagingService": messagingService,
             "body": body,
-            "to": "{{Contact.Attribute.RandomSendOtp.MobileNumber}}" //<----This should map to your data extension name and phone number column
+            "to": "{{Event.APIEvent-7385d8f2-9614-d95a-cb49-ac3ca4002742.MobileNumber}}" //<----This should map to your data extension name and phone number column
         }];
 
         payload['metaData'].isConfigured = true;
