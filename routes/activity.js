@@ -101,13 +101,15 @@ exports.execute = function (req, res) {
     const authToken = requestBody.authToken;
     const to = requestBody.to;
     const from = requestBody.messagingService;
-    const body = requestBody.body;   
+    const body = requestBody.body; 
+    const OTP =  requestBody.OTP;
     console.log("requestBody: "+requestBody);
     console.log("ExecutedaccountSid: "+accountSid);
     console.log("ExecutedauthToken: "+authToken);
     console.log("Executedto: "+to);
     console.log("Executedfrom: "+from);
     console.log("Executedbody: "+body);
+    console.log("ExecutedOTP: "+OTP);
     
 //       const client = require('twilio')(accountSid, authToken);
 //          client.messages
