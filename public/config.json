@@ -17,7 +17,6 @@
             "inArguments": [
                 {
                     "to": "{{Contact.Attribute.RandomSendOtp.MobileNumber}}"
-                 // "to": "{{Event.DEAudience-0a845042-fe54-8ac9-88a5-b9947cda7676.PhoneNo}}" 
                 }               
             ],
             "outArguments": [],
